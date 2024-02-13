@@ -33,7 +33,7 @@ export default class CreateRoomPage extends Component {
 
   handleGuestCanPauseChange(e) {
     this.setState({
-      guestCanPause: e.target.value === "true" ? true : false,
+      guestCanPause: !!(e.target.value === "true"),
     });
   }
 
