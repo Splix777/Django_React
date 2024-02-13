@@ -1,0 +1,70 @@
+
+Launch Django server using 'python3 manage.py runserver' command
+- The server will run on http://localhost:8000/
+- Whenever you make changes to the server, you will need to restart the server to see the changes
+    - To restart the server, press 'Ctrl + C' to stop the server and then run the server again using 'python3 manage.py runserver' command
+    - To make migrations, run 'python3 manage.py makemigrations' and 'python3 manage.py migrate' commands
+    - To migrate the database, run 'python3 manage.py migrate' command
+    - To create a superuser, run 'python3 manage.py createsuperuser' command
+    - To access the admin page, go to http://localhost:8000/admin/ and login using the superuser credentials
+    - To access the API, go to http://localhost:8000/api/
+
+Launch React server using 'npm run dev' command
+- React runs in a npm server and will run on http://localhost:3000/
+    - Whenever you make changes to the React server, the server will automatically update the changes
+    - To stop the server, press 'Ctrl + C' to stop the server
+    - To build the React server, run 'npm run build' command
+    - To run the build, run 'npm run start' command
+    - To run the tests, run 'npm run test' command
+    - To run the tests with coverage, run 'npm run test:coverage' command
+    - To run the tests with watch, run 'npm run test:watch' command
+    - To run the tests with watch and coverage, run 'npm run test:watch:coverage' command
+    - To run the tests with watch and update snapshots, run 'npm run test:watch:update' command
+    - To run the tests with watch and update snapshots with coverage, run 'npm run test:watch:update:coverage' command
+
+## API Endpoints
+- GET /api/ - Get all the data
+- POST /api/ - Create a new data
+- GET /api/:id/ - Get a specific data
+- PUT /api/:id/ - Update a specific data
+- DELETE /api/:id/ - Delete a specific data
+
+## API Data
+- id: Integer
+- name: String
+- description: String
+- price: Float
+- quantity: Integer
+- image: String
+- created_at: Date
+- updated_at: Date
+
+## API Response
+- GET /api/
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Product 1",
+            "description": "Description 1",
+            "price": 100.00,
+            "quantity": 10,
+            "image": "http://localhost:8000/media/products/product1.jpg",
+            "created_at": "2021-01-01T00:00:00Z",
+            "updated_at": "2021-01-01T00:00:00Z"
+        },
+        {
+            "id": 2,
+            "name": "Product 2",
+            "description": "Description 2",
+            "price": 200.00,
+            "quantity": 20,
+            "image": "http://localhost:8000/media/products/product2.jpg",
+            "created_at": "2021-01-01T00:00:00Z",
+            "updated_at": "2021-01-01T00:00:00Z"
+        }
+    ]
+}
+```
+
